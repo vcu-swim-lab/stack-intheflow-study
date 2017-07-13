@@ -251,6 +251,18 @@ public class SettingsActivity extends AppCompatActivity {
             url = params[0];
             username = params[1];
             password = params[2];
+            /**
+             * !!!!! FOR THE PURPOSE OF A STUDY, THIS AUTHENTICATION BYPASS
+             *       WAS ADDED FOR MORE RAPID/DIRECT DEVELOPMENT. THIS SHOULD
+             *       NOT BE PRESENT IN ANY PRODUCTION CODE!
+             */
+            if(url.toUpperCase().contains("DEV")) {
+                return LoginStatus.OK;
+            }
+            /**
+             * TODO: NEVER USE THIS CODE IN PRODUCTION!
+             * !!!!! END OF AUTHENTICATION BYPASS
+             */
             return NotesClientUtil.isValidLogin(url, username, password);
         }
 
