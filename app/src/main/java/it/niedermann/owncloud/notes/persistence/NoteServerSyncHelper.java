@@ -192,17 +192,29 @@ public class NoteServerSyncHelper {
 
         @Override
         protected LoginStatus doInBackground(Void... voids) {
-            client = createNotesClient(); // recreate NoteClients on every sync in case the connection settings was changed
-            Log.d(getClass().getSimpleName(), "STARTING SYNCHRONIZATION");
-            //dbHelper.debugPrintFullDB();
-            LoginStatus status = LoginStatus.OK;
-            pushLocalChanges();
-            if(!onlyLocalChanges) {
-                status = pullRemoteChanges();
-            }
-            //dbHelper.debugPrintFullDB();
-            Log.d(getClass().getSimpleName(), "SYNCHRONIZATION FINISHED");
-            return status;
+            /**
+             * !!!!! FOR THE PURPOSE OF A STUDY, THIS SERVER CONNECTION
+             *       UTILITY HAS BEEN 'TURNED OFF'. THIS IS FOR THE
+             *       CONVENIENCE OF THE STUDY PARTICIPANTS. THIS PART
+             *       OF THE CODE IS NOT RELEVANT TO SOLVING ANY
+             *       PROBLEM IN THE STUDY AND DOES NOT NEED TO BE
+             *       ALTERED.
+             */
+            return LoginStatus.OK;
+//            client = createNotesClient(); // recreate NoteClients on every sync in case the connection settings was changed
+//            Log.d(getClass().getSimpleName(), "STARTING SYNCHRONIZATION");
+//            //dbHelper.debugPrintFullDB();
+//            LoginStatus status = LoginStatus.OK;
+//            pushLocalChanges();
+//            if(!onlyLocalChanges) {
+//                status = pullRemoteChanges();
+//            }
+//            //dbHelper.debugPrintFullDB();
+//            Log.d(getClass().getSimpleName(), "SYNCHRONIZATION FINISHED");
+//            return status;
+            /**
+             * !!!!! END OF ALTERATION
+             */
         }
 
         /**
