@@ -1,4 +1,10 @@
 # Study - StackInTheFlow Development Tool
+## General Guidlines :
+There have been a few modifications to the codebase that is specific for this study. 
+- We have created a bypass for user/server authentication. As long as you fill each field on the settings page, you should be logged in.
+- All server communication and persitance has been disabled. To better simulate server latency, there is a slight delay added to every server call.
+
+Although these changes may be related to the given problems, they don't directly affect solving the problems and should not be altered during the study.
 
 ## Problem 1 - Swipe Delete Enhancement
  - https://github.com/stefan-niedermann/nextcloud-notes/pull/185/files
@@ -18,7 +24,8 @@
  - https://github.com/stefan-niedermann/nextcloud-notes/pull/208/files
 
 ### Problem Statement :
- - 
+ - Users are able to configure their server authentication credentials on the settings screen. If they are entering their password, they have the option to toggle the password obfuscation. If the users go to the settings screen after the credentials have already been configured, the credentials stay in the form, to let the user know what credentials are being used. However, if the user has previously entered their credentials and then returns to the settings screen, the old password can still be deobfuscated. This is a security issue.
+ - Help improve the app by not letting the user deobfuscate the password if it is the saved password. The user should still be able to deobfuscate the password if it has just been entered.
 
 ## Problem 4 - Back Button Bugfix
  - https://github.com/stefan-niedermann/nextcloud-notes/pull/209/files
