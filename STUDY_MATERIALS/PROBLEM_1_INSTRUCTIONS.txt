@@ -1,0 +1,13 @@
+Problem 1 - Swipe Delete Enhancement
+
+- Users are able to delete notes by swiping left or right when viewing the note-list screen.
+However, some users are reporting that it is not clear what the swipe motion does until after
+the note is deleted. Also, some have said that the swipe motion requires too little horizontal
+distance and therefore makes it easy to accidentally delete notes.
+
+- Help improve the app by adding an icon/animation that appears when the user attempts to swipe
+a note. It should inform the user that if the swipe is completed, the note will be deleted.
+Also, make the it harder for a user to accidentally delete a note through swiping by making
+the swipe motion longer.
+
+See related images

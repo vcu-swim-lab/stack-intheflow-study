@@ -94,7 +94,7 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             nvHolder.noteCategory.setVisibility(note.getCategory().isEmpty() ? View.GONE : View.VISIBLE);
             nvHolder.noteCategory.setText(note.getCategory());
             nvHolder.noteExcerpt.setText(note.getExcerpt());
-            nvHolder.noteStatus.setVisibility(DBStatus.VOID.equals(note.getStatus()) ? View.GONE : View.VISIBLE);
+            nvHolder.noteStatus.setVisibility(DBStatus.VOID.equals(note.getStatus()) ? View.GONE : View.GONE);
             nvHolder.noteFavorite.setImageResource(note.isFavorite() ? R.drawable.ic_star_grey600_24dp : R.drawable.ic_star_outline_grey600_24dp);
             nvHolder.noteFavorite.setOnClickListener(new View.OnClickListener() {
                 @Override

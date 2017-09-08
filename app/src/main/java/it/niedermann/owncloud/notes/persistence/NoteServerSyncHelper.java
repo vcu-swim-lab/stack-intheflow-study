@@ -16,11 +16,7 @@ import org.json.JSONException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import it.niedermann.owncloud.notes.R;
 import it.niedermann.owncloud.notes.android.activity.SettingsActivity;
@@ -200,6 +196,14 @@ public class NoteServerSyncHelper {
              *       PROBLEM IN THE STUDY AND DOES NOT NEED TO BE
              *       ALTERED.
              */
+            try {
+                // This sleep is to simulate the time needed to fetch the server
+                int latency = Math.abs((int)((new Random().nextGaussian() * 800) + 2500));
+                Log.i("time", Integer.toString(latency));
+                Thread.sleep(latency);
+            } catch (InterruptedException e) {
+                Log.e("SyncTask:doInBackground", Arrays.toString(e.getStackTrace()));
+            }
             return LoginStatus.OK;
 //            client = createNotesClient(); // recreate NoteClients on every sync in case the connection settings was changed
 //            Log.d(getClass().getSimpleName(), "STARTING SYNCHRONIZATION");
