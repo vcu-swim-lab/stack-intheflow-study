@@ -1,0 +1,12 @@
+Problem 3 - Saved Password Bugfix
+
+- On the settings page, there is a password field for users to log in to their Next-Cloud
+account. This text field has the option to “unhide/hide” the text. Because the
+credentials(including the password) are saved by the app, when you surf back to the
+settings page, you can “unhide” the saved password. This is a security issue.
+
+- Help secure the user’s credentials by only allowing the “unhide/hide” option when it has
+just been entered. Once the user leaves the settings page, the password field should be “locked”.
+Of course, the user should be able to “unhide/hide” the password once they enter a new password.
+
+See related images
