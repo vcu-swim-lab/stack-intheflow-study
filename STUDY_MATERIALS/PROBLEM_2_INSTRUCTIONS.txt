@@ -1,0 +1,9 @@
+Problem 2 - Splash Screen Enhancement
+
+- Currently, there is no splash screen. Not only are we missing out on a chance for branding, but
+there is a slight lag when the user opens the app due to server connection latency.
+
+- Help improve the user experience by creating a splash screen that displays when the user starts
+the app. It should help hide the latency between the app and the server.
+
+See related images
