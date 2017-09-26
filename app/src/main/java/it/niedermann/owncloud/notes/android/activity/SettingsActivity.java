@@ -256,14 +256,16 @@ public class SettingsActivity extends AppCompatActivity {
              *       WAS ADDED FOR MORE RAPID/DIRECT DEVELOPMENT. THIS SHOULD
              *       NOT BE PRESENT IN ANY PRODUCTION CODE!
              */
-            if(url.toUpperCase().contains("DEV")) {
+            if(!url.isEmpty() && !username.isEmpty() && !password.isEmpty()) {
                 return LoginStatus.OK;
+            } else {
+                return LoginStatus.AUTH_FAILED;
             }
+            //return NotesClientUtil.isValidLogin(url, username, password);
             /**
              * TODO: NEVER USE THIS CODE IN PRODUCTION!
              * !!!!! END OF AUTHENTICATION BYPASS
              */
-            return NotesClientUtil.isValidLogin(url, username, password);
         }
 
         @Override

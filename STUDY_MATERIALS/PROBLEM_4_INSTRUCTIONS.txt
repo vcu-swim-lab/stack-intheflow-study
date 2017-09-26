@@ -1,0 +1,12 @@
+Problem 4 - Back Button Bugfix
+
+- Users can create and save notes on the create-note screen. If the user has started
+creating a new note, when the Android back button is pressed, all of their work is
+lost. Users have complained that they want the app to save their progress, even if
+they don't explicitly press the 'save' button.
+
+- Help improve the app by making the Android back button save the note as if the user
+had pressed the 'save' button. However, don't save the note if the user has not entered
+any text yet (they probably didn't intend to save an empty note).
+
+See related images
